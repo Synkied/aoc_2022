@@ -2527,13 +2527,13 @@ for strat in all_strats:
 
     # we need to lose
     if opp_index == (player_index + 1) % 3:
-        final_score += scores[strat[1]]
+        final_score += possible_scores[player_index]
     # we need to make it a draw
     elif opp_index == player_index:
-        final_score += scores[strat[1]] + 3
+        final_score += possible_scores[player_index] + 3
     # we need to win
     elif opp_index == (player_index - 1) % 3:
-        final_score += scores[strat[1]] + 6
+        final_score += possible_scores[player_index] + 6
 
 print("part 1", final_score)
 
